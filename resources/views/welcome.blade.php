@@ -11,7 +11,7 @@
     <div class="container pt-5">
         <div class="row">
             <div class="col-md-12">
-                <div class="p-5 mb-4 bg-light shadow rounded-3">
+                <div class="p-5 mb-4 rounded-3" style="background-color: #F4F3F3;">
                     <div class="container-fluid py-5">
                         <h1 class="display-5 fw-bold">REPORT | MOMENTUM INTERNET</h1>
                         <p class="col-md-8 fs-5 fw-light">Used by the department or unit of Momentum Internet Sdn Bhd. For registration into this system can refer to Mr. Danial</p>
