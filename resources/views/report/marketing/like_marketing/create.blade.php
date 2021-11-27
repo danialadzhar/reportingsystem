@@ -25,7 +25,12 @@
                 </div>
             </div>
         @endif
-
+        
+        <div class="col-md-12">
+            <div class="alert alert-info" role="alert">
+                <p><b>Perhatian!</b> Untuk Cost Per Like, Total Spending & Total Like perlu dibuat dalam kiraan <b>AVERAGE TOTAL</b>.</p>
+            </div>
+        </div>
         <div class="col-md-12">
             <form action="{{ url('home/marketing/like-marketing/store') }}" method="POST">
             @csrf
