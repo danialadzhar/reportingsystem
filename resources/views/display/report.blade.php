@@ -29,7 +29,8 @@
                         <hr>
                         <p><b>Cost Per Like : </b> RM {{ $report_like_marketing_cost_per_like->report_value }}</p>
                         <p><b>Total Spending : </b> RM {{ number_format($report_like_marketing_total_spending->report_value) }}</p>
-                        <p><b>Total Like : </b> {{ number_format($report_like_marketing_total_like->report_value) }}</p>
+                        <p class="mb-3"><b>Total Like : </b> {{ number_format($report_like_marketing_total_like->report_value) }}</p>
+                        <small class="text-muted"><b>Last Updated :</b> {{ Carbon\Carbon::parse($report_like_marketing->created_at)->setTimezone('Asia/Kuala_Lumpur') }}</small>
                     </div>
                 </div>
             </div>
@@ -52,6 +53,11 @@
                                 <p><b>Total : </b> {{ number_format($report_followers_total_followers_instagram->report_value) }}</p>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <small class="text-muted"><b>Last Updated :</b> {{ Carbon\Carbon::parse($report_followers->created_at)->setTimezone('Asia/Kuala_Lumpur') }}</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,6 +77,9 @@
                                 <p><b>New Members : </b>{{ number_format($report_new_members->report_value) }}</p>
                                 <p><b>Active Members : </b> {{ number_format($report_active_members->report_value) }}</p>
                             </div>
+                            <div class="col-md-12">
+                                <small class="text-muted"><b>Last Updated :</b> {{ Carbon\Carbon::parse($report_facebook_group->created_at)->setTimezone('Asia/Kuala_Lumpur') }}</small>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -86,6 +95,7 @@
                         @if ($report_engagement->status_value == 'down')
                             <h1 class="text-danger mt-4"><i class="fas fa-angle-double-down"></i> {{ number_format($report_engagement->report_value) }}</h1>
                         @endif
+                        <small class="text-muted"><b>Last Updated :</b> {{ Carbon\Carbon::parse($report_update_engagement->created_at)->setTimezone('Asia/Kuala_Lumpur') }}</small>
                     </div>
                 </div>
             </div>
@@ -104,6 +114,7 @@
                         @if ($report_post_reach->status_value == 'down')
                             <h1 class="text-danger mt-4"><i class="fas fa-angle-double-down"></i> {{ number_format($report_post_reach->report_value) }}</h1>
                         @endif
+                        <small class="text-muted"><b>Last Updated :</b> {{ Carbon\Carbon::parse($report_update_post_reach->created_at)->setTimezone('Asia/Kuala_Lumpur') }}</small>
                     </div>
                 </div>
             </div>
@@ -118,6 +129,9 @@
                             <div class="col-md-5">
                                 <p><b>Daily Download : </b>{{ number_format($report_daily_download->report_value) }}</p>
                                 <p><b>Total Download : </b> {{ number_format($report_total_download->report_value) }}</p>
+                            </div>
+                            <div class="col-md-12">
+                                <small class="text-muted"><b>Last Updated :</b> {{ Carbon\Carbon::parse($report_podcast->created_at)->setTimezone('Asia/Kuala_Lumpur') }}</small>
                             </div>
                         </div>
                     </div>
@@ -138,6 +152,7 @@
                         @if ($report_blog_traffic->status_value == 'down')
                             <h1 class="text-danger mt-4"><i class="fas fa-angle-double-down"></i> {{ number_format($report_blog_traffic->report_value) }}</h1>
                         @endif
+                        <small class="text-muted"><b>Last Updated :</b> {{ Carbon\Carbon::parse($report_update_blog_traffic->created_at)->setTimezone('Asia/Kuala_Lumpur') }}</small>
                     </div>
                 </div>
             </div>
@@ -152,6 +167,7 @@
                         @if ($report_telegram_subscriber->status_value == 'down')
                             <h1 class="text-danger mt-4"><i class="fas fa-angle-double-down"></i> {{ number_format($report_telegram_subscriber->report_value) }}</h1>
                         @endif
+                        <small class="text-muted"><b>Last Updated :</b> {{ Carbon\Carbon::parse($report_update_telegram_subscriber->created_at)->setTimezone('Asia/Kuala_Lumpur') }}</small>
                     </div>
                 </div>
             </div>
@@ -171,6 +187,9 @@
                                 <p><b>Total Views : </b>{{ number_format($report_tiktok_total_views->report_value) }}</p>
                                 <p><b>Total Followers : </b> {{ number_format($report_tiktok_total_followers->report_value) }}</p>
                             </div>
+                            <div class="col-md-12">
+                                <small class="text-muted"><b>Last Updated :</b> {{ Carbon\Carbon::parse($report_tiktok->created_at)->setTimezone('Asia/Kuala_Lumpur') }}</small>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -186,6 +205,7 @@
                         @if ($report_youtube_subscriber->status_value == 'down')
                             <h1 class="text-danger mt-4"><i class="fas fa-angle-double-down"></i> {{ number_format($report_youtube_subscriber->report_value) }}</h1>
                         @endif
+                        <small class="text-muted"><b>Last Updated :</b> {{ Carbon\Carbon::parse($report_update_youtube_subscriber->created_at)->setTimezone('Asia/Kuala_Lumpur') }}</small>
                     </div>
                 </div>
             </div>

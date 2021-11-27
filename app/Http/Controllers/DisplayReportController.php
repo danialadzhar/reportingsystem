@@ -19,39 +19,49 @@ class DisplayReportController extends Controller
         $report_like_marketing_cost_per_like = Reporting::where('dept', 'MARKETING')->where('report_section', 'LIKE_MARKETING')->where('report_option', 'cost_per_like')->latest()->first();
         $report_like_marketing_total_spending = Reporting::where('dept', 'MARKETING')->where('report_section', 'LIKE_MARKETING')->where('report_option', 'total_spending')->latest()->first();
         $report_like_marketing_total_like = Reporting::where('dept', 'MARKETING')->where('report_section', 'LIKE_MARKETING')->where('report_option', 'total_like')->latest()->first();
+        $report_like_marketing = Reporting::where('dept', 'MARKETING')->where('report_section', 'LIKE_MARKETING')->latest()->first();
 
         // Followers
         $report_followers_new_followers_facebook = Reporting::where('dept', 'MARKETING')->where('report_section', 'FOLLOWERS')->where('report_option', 'new_followers_facebook')->latest()->first();
         $report_followers_new_followers_instagram = Reporting::where('dept', 'MARKETING')->where('report_section', 'FOLLOWERS')->where('report_option', 'new_followers_instagram')->latest()->first();
         $report_followers_total_followers_facebook = Reporting::where('dept', 'MARKETING')->where('report_section', 'FOLLOWERS')->where('report_option', 'total_followers_facebook')->latest()->first();
         $report_followers_total_followers_instagram = Reporting::where('dept', 'MARKETING')->where('report_section', 'FOLLOWERS')->where('report_option', 'total_followers_instagram')->latest()->first();
+        $report_followers = Reporting::where('dept', 'MARKETING')->where('report_section', 'FOLLOWERS')->latest()->first();
 
         // Engagement
         $report_engagement = Reporting::where('dept', 'MARKETING')->where('report_section', 'ENGAGEMENT')->where('report_option', 'total_engagement')->latest()->first();
+        $report_update_engagement = Reporting::where('dept', 'MARKETING')->where('report_section', 'ENGAGEMENT')->latest()->first();
 
         // Facebook Group
         $report_new_members = Reporting::where('dept', 'MARKETING')->where('report_section', 'FACEBOOK_GROUP')->where('report_option', 'new_members')->latest()->first();
         $report_active_members = Reporting::where('dept', 'MARKETING')->where('report_section', 'FACEBOOK_GROUP')->where('report_option', 'active_members')->latest()->first();
+        $report_facebook_group = Reporting::where('dept', 'MARKETING')->where('report_section', 'FACEBOOK_GROUP')->latest()->first();
 
         // Post Reach
         $report_post_reach = Reporting::where('dept', 'MARKETING')->where('report_section', 'POST_REACH')->where('report_option', 'total_reach')->latest()->first();
+        $report_update_post_reach = Reporting::where('dept', 'MARKETING')->where('report_section', 'POST_REACH')->latest()->first();
 
         // Podcast
         $report_daily_download = Reporting::where('dept', 'MARKETING')->where('report_section', 'PODCAST')->where('report_option', 'daily_download')->latest()->first();
         $report_total_download = Reporting::where('dept', 'MARKETING')->where('report_section', 'PODCAST')->where('report_option', 'total_download')->latest()->first();
+        $report_podcast = Reporting::where('dept', 'MARKETING')->where('report_section', 'PODCAST')->latest()->first();
 
         // Blog Traffic
         $report_blog_traffic = Reporting::where('dept', 'MARKETING')->where('report_section', 'BLOG_TRAFFIC')->where('report_option', 'total_traffic')->latest()->first();
+        $report_update_blog_traffic = Reporting::where('dept', 'MARKETING')->where('report_section', 'BLOG_TRAFFIC')->latest()->first();
 
         // Telegram Subscriber
         $report_telegram_subscriber = Reporting::where('dept', 'MARKETING')->where('report_section', 'TELEGRAM_SUBSCRIBER')->where('report_option', 'total_subscriber')->latest()->first();
+        $report_update_telegram_subscriber = Reporting::where('dept', 'MARKETING')->where('report_section', 'TELEGRAM_SUBSCRIBER')->latest()->first();
 
         // Youtube Subscriber
         $report_youtube_subscriber = Reporting::where('dept', 'MARKETING')->where('report_section', 'YOUTUBE_SUBSCRIBER')->where('report_option', 'total_subscriber')->latest()->first();
+        $report_update_youtube_subscriber = Reporting::where('dept', 'MARKETING')->where('report_section', 'YOUTUBE_SUBSCRIBER')->latest()->first();
 
         // Tiktok
         $report_tiktok_total_views = Reporting::where('dept', 'MARKETING')->where('report_section', 'TIKTOK')->where('report_option', 'total_views')->latest()->first();
         $report_tiktok_total_followers = Reporting::where('dept', 'MARKETING')->where('report_section', 'TIKTOK')->where('report_option', 'total_followers')->latest()->first();
+        $report_tiktok = Reporting::where('dept', 'MARKETING')->where('report_section', 'TIKTOK')->latest()->first();
 
         // Zeepicks
         $zeepicks_subscriber = Http::get('http://app.zeepicks.com/api/total-subscriber')->json();
@@ -61,6 +71,7 @@ class DisplayReportController extends Controller
         return view('display.report', compact('report_like_marketing_cost_per_like', 'report_like_marketing_total_spending','report_like_marketing_total_like','report_followers_new_followers_facebook',
         'report_followers_new_followers_instagram', 'report_followers_total_followers_facebook','report_followers_total_followers_instagram', 'report_engagement', 'report_new_members', 'report_active_members',
         'report_post_reach', 'report_daily_download', 'report_total_download', 'report_blog_traffic', 'report_telegram_subscriber', 'report_youtube_subscriber', 'report_tiktok_total_views', 'report_tiktok_total_followers',
-        'zeepicks_subscriber', 'zeepicks_total_transactions', 'zeepicks_payment_history_yearly'));
+        'zeepicks_subscriber', 'zeepicks_total_transactions', 'zeepicks_payment_history_yearly', 'report_like_marketing', 'report_followers', 'report_tiktok', 'report_update_youtube_subscriber',
+        'report_update_telegram_subscriber', 'report_update_blog_traffic', 'report_podcast', 'report_update_post_reach', 'report_facebook_group', 'report_update_engagement'));
     }
 }
