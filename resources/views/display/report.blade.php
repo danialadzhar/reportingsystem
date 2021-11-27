@@ -223,7 +223,7 @@
                             </div>
                             <div class="col-md-3">
                                 <p><b>Total Subscriber : </b>{{ number_format($zeepicks_subscriber) }}</p>
-                                <p><b>Total Sales(Annualy) : </b> {{ number_format($zeepicks_payment_history_yearly) }}</p>
+                                <p><b>Total Sales(Annualy) : </b> RM {{ number_format($zeepicks_payment_history_yearly) }}</p>
                             </div>
                             <div class="col-md-3">
                                 <p><b>Total Transactions : </b>{{ number_format($zeepicks_total_transactions) }}</p>
