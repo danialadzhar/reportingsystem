@@ -142,6 +142,7 @@ class ReportMarketingController extends Controller
                 'report_option' => $request->report_option[$key],
                 'report_value' => $value,
                 'report_section' => 'PODCAST',
+                'status_value' => 0,
                 'dept' => 'MARKETING',
             ]);
 
@@ -233,6 +234,7 @@ class ReportMarketingController extends Controller
                 'report_option' => $request->report_option[$key],
                 'report_value' => $value,
                 'report_section' => 'TIKTOK',
+                'status_value' => 0,
                 'dept' => 'MARKETING',
             ]);
 
