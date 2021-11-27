@@ -14,7 +14,8 @@
                 <div class="p-5 mb-4 bg-light shadow rounded-3">
                     <div class="container-fluid py-5">
                         <h1 class="display-5 fw-bold">REPORT | MOMENTUM INTERNET</h1>
-                        <p class="col-md-8 fs-5 fw-light">Used by the department or unit of Momentum Internet Sdn Bhd. For registration into this system can refer to Mr. Danial or email to <span class="text-danger fw-bold">danialadzhar@momentuminternet.com</span></p>
+                        <p class="col-md-8 fs-5 fw-light">Used by the department or unit of Momentum Internet Sdn Bhd. For registration into this system can refer to Mr. Danial</p>
+                        <small><b>Contact :</b> danialadzhar@momentuminternet.com</small> <br><br><br>
                         <a href="{{ route('login') }}" class="btn btn-danger btn-lg" type="button">Sign In <i class="fas fa-sign-in-alt"></i></a>
                     </div>
                 </div>
